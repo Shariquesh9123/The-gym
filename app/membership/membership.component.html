@@ -1,0 +1,43 @@
+<!-- Do not use container class else it will leave side spaces -->
+<div class="container-bg d-flex justify-content-center text-center align-items-center position-relative mw-100 h-100">
+  <div class="position-absolute text-light display-4 lead"><span class="text-warning">Our</span> Plans</div>
+  <img src="../../assets/img/Plans.png" class="img-fluid w-100 " alt="Our Plans Background">
+
+</div>
+
+<section>
+  <div class="state d-flex w-50 mx-auto mt-3 justify-content-center">
+    <select class="form-select text-center bg-info text-dark" aria-label="Default select example"
+      [(ngModel)]="selectedState">
+      <option [ngValue]="null" selected>Choose Your State</option>
+      <option *ngFor="let state of states" [ngValue]="state">{{ state }}</option>
+    </select>
+  </div>
+
+  <div *ngIf="selectedState" class="city d-flex w-50 mx-auto mt-3 justify-content-center">
+    <select class="form-select text-center " aria-label="Default select example" [(ngModel)]="selectedCity">
+      <option [ngValue]="null" selected>Choose Your City</option>
+      <option *ngFor="let city of cities[selectedState]" [ngValue]="city">{{ city }}</option>
+    </select>
+  </div>
+
+  <section id="MemberShips-Details">
+
+    <h2 class=" display-6 lead mt-3" *ngIf="selectedCity">Our Gym in: {{selectedCity}}</h2>
+    <div class="row mt-4">
+      <div class="col-sm-4" *ngFor="let gym of  selectedCityGyms">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">{{ gym.name }}</h5>
+            <p class="card-text">{{ gym.price }}</p>
+            <a href="#" class="btn btn-primary btn-success">Buy Plan</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+</section>
+<app-contact-us></app-contact-us>
+

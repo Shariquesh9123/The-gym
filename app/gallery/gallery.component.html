@@ -1,0 +1,18 @@
+<!--Buttons -->
+<div class="gallery-bg">
+    <div class="text-center text-light">
+        <h1><span class="text-warning">GALL</span>ERY</h1>
+    </div>
+
+    <img src="../../assets/img/Gallery-Img/pic9.jpg" alt="">
+</div>
+<!--Buttons -->
+<div class="main-content mt-3 d-flex justify-content-center">
+    <button class="btn btn-outline-primary mx-2" type="button" (click)="showAll()">All</button>
+    <button class="btn btn-outline-primary mx-2" type="button" (click)="showImages()">Images</button>
+    <button class="btn btn-outline-primary mx-2" type="button" (click)="showVideos()">Videos</button>
+</div>
+
+
+<app-videos *ngIf="displayVideos"></app-videos>
+<app-images *ngIf="displayImages"></app-images>

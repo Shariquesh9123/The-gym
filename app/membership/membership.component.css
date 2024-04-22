@@ -1,0 +1,13 @@
+.container-bg img {
+    height: 40vh;
+    object-fit: cover;
+    
+}
+
+.state select,
+option {
+    /* background-color: rgb(23,162,184); */
+    /* color: wheat; */
+    border-radius: 6px;
+
+}

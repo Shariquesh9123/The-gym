@@ -1,0 +1,13 @@
+.row img {
+    max-width: 100%;
+    cursor: pointer;
+
+
+}
+
+/* CSS to maximize the size of the photo and make its position absolute */
+.expanded {
+    max-width: 100%;
+    position: absolute;
+
+}
